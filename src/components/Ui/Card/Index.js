@@ -1,12 +1,12 @@
 import React from 'react'
 import './Style.css'
 
-const indexCard = props => {
+const IndexCard = props => {
     return(
-        <div className="card">
+        <div className="card" style={{width: props.width ? props.width: '100%'}}>
             <small>{props.children}</small>
         </div>
     )
 }
 
-export default indexCard
+export default IndexCard

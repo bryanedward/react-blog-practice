@@ -1,18 +1,18 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './style.css'
 
 const indexHeader = props => {
-     return(
-         <header className="header">
-             <nav className="headerMenu">
-                 <a href="#">Inicio</a>
-                 <a href="#">Proyectos</a>
-             </nav>
-             <div>
-                 redes sociales
+    return (
+        <header className="header">
+            <nav className="headerMenu">
+                <NavLink to="/Publicaciones">Proyectos</NavLink>
+            </nav>
+            <div>
+                redes sociales
              </div>
-         </header>
-     )   
+        </header>
+    )
 }
 
 export default indexHeader

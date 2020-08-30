@@ -1,15 +1,15 @@
 import React from 'react'
 import './Style.css'
 
-const indexLogo = props => {
+const IndexLogo = () => {
     return(
         <div className="logo">
-            <a href="#">Desarrollando para hacer pendejadas</a>
+            <a href="Contactos">Desarrollando para hacer pendejadas</a>
         </div>
     )    
 }
 
-export default indexLogo
+export default IndexLogo
 
 
 

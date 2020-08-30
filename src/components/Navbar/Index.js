@@ -1,20 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import './Style.css'
 
-const indexNavbar = props => {
-    return(
+const IndexNavbar = () => {
+
+    const [search, setSearch] = useState(false)
+
+
+    const submitSearch = (e) => {
+        e.preventDefault()
+        alert('Buscar')
+    }
+
+    const openSearch = () => {
+        setSearch(true)
+    }
+
+    const searchClass = search ? 'searchInput active' : 'searchInput'
+
+    return (
         <div className="navbar">
             <ul className="navbarMenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Publicaiones</a></li>
-                <li><a href="#">Estupideces</a></li>
+                <li><NavLink to="/Contactos">Contactos</NavLink></li>
+                <li><NavLink to="/Publicaciones">Publicaciones</NavLink></li>
             </ul>
             <div className="search">
-                <input type="text" placeholder="Buscar"/>
-                <img src={require('../../assets/icons/search.png')} alt="serch"/>
+                <form onSubmit={submitSearch}>
+                    <input type="text" className={searchClass} placeholder="Buscar" />
+                    <img onClick={openSearch} className="searchIcon" src={require('../../assets/icons/search.png')} alt="serch" />
+                </form>
             </div>
         </div>
     )
 }
 
-export default indexNavbar
+export default IndexNavbar
