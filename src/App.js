@@ -16,6 +16,7 @@ function App() {
         <Route path="/" exact component={IndexHome} />
         <Route path="/Contactos" exact component={IndexAboutUs} />
         <Route path="/Publicaciones" exact component={IndexPost} />
+        <Route path="/Publicaciones/:id" exact component={IndexPost} />
       </Router>
     </div>
   );

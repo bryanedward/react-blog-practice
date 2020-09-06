@@ -1,3 +1,47 @@
 .sliderBar{
     width: 25%;
 }
+
+.cardHeader{
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.cardHeader span{
+    text-transform: uppercase;
+}
+
+.personalBio{
+    font-size: 1;
+    font-weight: bold;
+}
+
+.recentPosts{
+    padding: 10px 0;
+
+}
+
+.recentPost{
+    border-bottom: 1px solid #eee;
+    padding: 0 0 9px 0;
+}
+
+.recentPost h3{
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.recentPost span{
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.recentPost:hover{
+    transform: translateY(-10%);
+    cursor: pointer;
+}
