@@ -5,15 +5,24 @@ import Blog from '../../data/infoo.json'
 
 const IndexBlogPost = (props) => {
 
-
-    const [post, setPost] = useState({})
+    const [post, setPost] = useState({
+        id: "",
+        city_name: "",
+        country_name: "",
+        street: "",
+        country: "",
+        photo: ""
+    })
+    const [postId, setPostId] = useState("")
 
     useEffect(() => {
-        const idPublication = props.match.params.id
-        const infoUser = Blog.find(item => item.id === parseInt(idPublication))
+        const postId = props.match.params.id
+        const infoUser = Blog.find(item => item.id === parseInt(postId))
         setPost(infoUser)
-    })
-    
+        setPostId(postId)
+    }, [post, props.match.params.id])
+
+
     return (
         <div className="blogPostContainer">
             <IndexCard >
@@ -23,11 +32,11 @@ const IndexBlogPost = (props) => {
                     <span className="postedBy">Fecha:</span>
                 </div>
                 <div className="postImageContainer">
-                    <img alt="photo" 
-                        src={require('../../postimage/imgtest.jpg')} />
+                    <img alt="photo"
+                        src={post.photo} />
                 </div>
                 <div className="postContent">
-                    <h3>Titulo de las publicaciones</h3>
+                    <h3>{post.country}</h3>
                     <p>lorem</p>
                 </div>
             </IndexCard>

@@ -9,19 +9,21 @@ const IndexSlider = (props) => {
     const [post, setPost] = useState([])
 
     useEffect(() => {
-        // query all the publications
         const post = Blog
         setPost(post)
-    })
+    }, [post])
 
     return (
-        <div className="sliderBar">
+        <div className="sliderBar" style={{
+            width: props.width
+        }}>
             <IndexCard>
+                {/* barra derecha de las publicaciones */}
                 <div className="cardHeader" >
                     <span>Proximamente</span>
                 </div>
                 <div className="cardBody">
-                    <small className="personalBio">Desarrollando para  hacer pendejadas</small>
+                    <small className="personalBio">Informacion</small>
                 </div>
             </IndexCard>
             <IndexCard>
