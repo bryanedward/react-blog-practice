@@ -12,6 +12,7 @@
 .navbar ul li{
     list-style: none;
     display: inline-block;
+    text-transform: uppercase;
 }
 
 .navbar  ul li a{
@@ -22,6 +23,10 @@
     font-size: 20px;
     font-weight: 400;
     color: #000000;
+}
+
+.navbar ul li a:hover{
+    color: gray;
 }
 
 .search form{

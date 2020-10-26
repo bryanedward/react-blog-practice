@@ -18,8 +18,7 @@ const ImageGallery = props => (
     <div className="galleryPost" style={props.galleryStyle}>
         <section style={{ width: props.largeWidth }}>
             <div className="mainImageWrapper">
-                <img src={props.imagesArray[1]}
-                    alt="" />
+                <img src={props.imagesArray[1]} alt="" />
             </div>
         </section>
         <section className={"sideImageWrapper"}
@@ -43,11 +42,10 @@ const indexHome = () => {
         overflow: 'hidden'
     }
     const sideImageHeight = galleryHeight / 3
-
     const imgAr = Blog.map(post => post.photo)
     return (
         <div>
-            <IndexCard>
+            <IndexCard >
                 <ImageGallery
                     largeWidth="70%"
                     smallWidth="30%"
@@ -57,9 +55,7 @@ const indexHome = () => {
                 />
             </IndexCard>
             <Layout>
-                <RecentPost style={{
-                    width: '70%'
-                }} />
+                <RecentPost style={{ width: '70%'}} />
             </Layout>
         </div>
     )

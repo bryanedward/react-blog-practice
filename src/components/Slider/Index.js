@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './Style.css'
 import IndexCard from '../Ui/Card/Index'
 import Blog from '../../data/infoo.json'
@@ -29,6 +29,11 @@ const IndexSlider = (props) => {
             <IndexCard>
                 <div className="cardHeader">
                     <span>Redes sociales</span>
+                    <div className="cardImg">
+                        <i class="fa fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook"></i>
+                    </div>
                 </div>
             </IndexCard>
             <IndexCard>
@@ -38,7 +43,7 @@ const IndexSlider = (props) => {
                 <div className="recentPosts">
                     {
                         post.map(post => {
-                            return(
+                            return (
                                 <NavLink key={post.id} to={`${post.id}`}>
                                     <div className="recentPost">
                                         <h3>{post.city_name}</h3>

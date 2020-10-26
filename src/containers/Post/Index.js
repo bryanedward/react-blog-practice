@@ -3,13 +3,12 @@ import './Style.css'
 import IndexBlogPost from '../../components/BlogPost/Index'
 import IndexSlider from '../../components/Slider/Index'
 
-const IndexPost = (props) => {
+const IndexPost = () => {
 
-    console.log(props);
     return (
         <div>
             <section className="container">
-                <IndexBlogPost {...props}/>
+                <IndexBlogPost/>
                 <IndexSlider/>                
             </section>
         </div>

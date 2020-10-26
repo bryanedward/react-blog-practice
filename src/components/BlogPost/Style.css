@@ -1,35 +1,38 @@
 .blogPostContainer{
-    width: 70%;
+    width: 68%;
 }
 
 .blogHeader{
     text-align: center;
+    text-transform: uppercase;
 }
-
-.blogCategory{
-    display: block;
-    padding: 10px 0;
-    font-size: 14px;
-}
-
 .postTitle{
     transform: capitalize;
     font-size: 30px;
-    letter-spacing: 0.5px;    
+}
+.postImageContainer{
+    width: 100%;
+    box-sizing: border-box;
+}
+.postImageContainer img{
+    width: 100%;
+    object-fit: cover;
+}
+.postContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.postContent p:first-child{
+    font-weight: bold;
+    margin-right:4px;
+}
+
+.postContent .postdetails{
+    display: inline-flex;
 }
 
 .postedBy{
-    display: block;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.postImageContainer{
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-.postImageContainer img{
-    width: 100%;
+    display: inline-flex;
 }

@@ -8,7 +8,7 @@ const indexHero = props => {
     return(
         <div>
             <IndexCard>
-                <div style={{padding:"50px 0"}}>
+                <div style={{padding:"20px 0"}}>
                     <IndexLogo />
                 </div>
                 <IndexNavbar/>

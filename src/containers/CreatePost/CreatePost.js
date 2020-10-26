@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const IndexAboutUs = (params) => {
+const CreatePost = (params) => {
     return(
         <div>
             <small>About Us</small>
@@ -10,4 +10,4 @@ const IndexAboutUs = (params) => {
 }
 
 
-export default IndexAboutUs
+export default CreatePost
