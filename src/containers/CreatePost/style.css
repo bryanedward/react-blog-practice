@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -24,4 +25,16 @@
 
 .form-file{
     margin-left: 1.5rem;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.form-file > input{
+    margin-bottom: 1rem;
+}
+
+.form-file > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }

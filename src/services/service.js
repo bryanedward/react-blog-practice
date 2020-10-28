@@ -7,26 +7,19 @@ class Service {
     getAll() {
         //retornar todas las consultas
         const ser = firebase.database()
-        const db = ser.ref("/publications")
-        return db;
+        return ser.ref("/publications")
+    }
+
+    createPublication(data){
+        const ser = firebase.database()
+        return ser.ref('/publications').push(data)
     }
 
     createPost(image){
         //funcion para subir imagenes a firebase storage
         const create = firebase.storage();
         const uploadTask = create.ref('images/'+image.name).put(image);
-        uploadTask.on('state_changed', snapshot => {},
-            error => { console.log(error) },
-            () => {
-                create
-                .ref("images")
-                .child(image.name)
-                .getDownloadURL()
-                .then(url => {
-                    console.log(url);
-                })
-            })
-            
+        return uploadTask;    
     }
 }
 
