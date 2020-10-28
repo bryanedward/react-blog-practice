@@ -1,0 +1,27 @@
+.submit-form{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.form-groups{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.form-group{
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.form-file{
+    margin-left: 1.5rem;
+}

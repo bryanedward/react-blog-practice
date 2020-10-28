@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import IndexHome from './containers/Home/Index'
 import IndexHero from './components/Hero/Index';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CreatePost from './containers/CreatePost/CreatePost';

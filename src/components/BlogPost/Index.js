@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './Style.css'
 import Service from '../../services/service'
 import IndexCard from '../Ui/Card/Index'
-import Blog from '../../data/infoo.json'
 
 export default class IndexBlogPost extends Component {
 
@@ -28,7 +27,6 @@ export default class IndexBlogPost extends Component {
 
         items.forEach(element => {
             //recorrer los datos y guardalos
-            console.log(element.val());
             let key = element.key
             let data = element.val()
             publication.push({
