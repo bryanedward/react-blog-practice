@@ -23,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 1rem;
+    margin-bottom: .8rem;
 }
 .postContent p:first-child{
     font-weight: bold;
@@ -36,3 +37,20 @@
 .postedBy{
     display: inline-flex;
 }
+
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #234;
+    font-weight: bold;
+}
+
+
+/* post flotante */
+
+.blog_post{
+    padding: 10px;
+    position: relative;
+    border: 1px solid black;
+}
+

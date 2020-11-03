@@ -2,10 +2,9 @@ import React from 'react'
 import './Style.css'
 
 const IndexCard = props => {
-    
-    console.log(props);
-    return(
-        <div className="card" style={{width: props.width ? props.width: '100%'}} {...props}>
+
+    return (
+        <div className="card">
             <small>{props.children}</small>
         </div>
     )

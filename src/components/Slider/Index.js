@@ -13,24 +13,17 @@ const IndexSlider = (props) => {
         setPost(post)
     }, [post])
 
+    var instagram = () => {
+        window.location.href = "https://www.instagram.com"
+    }
+
     return (
-        <div className="sliderBar" style={{
-            width: props.width
-        }}>
-            <IndexCard>
-                {/* barra derecha de las publicaciones */}
-                <div className="cardHeader" >
-                    <span>Proximamente</span>
-                </div>
-                <div className="cardBody">
-                    <small className="personalBio">Informacion</small>
-                </div>
-            </IndexCard>
+        <div className="sliderBar">
             <IndexCard>
                 <div className="cardHeader">
                     <span>Redes sociales</span>
                     <div className="cardImg">
-                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-instagram" onClick={instagram}></i>
                         <i class="fab fa-twitter"></i>
                         <i class="fab fa-facebook"></i>
                     </div>

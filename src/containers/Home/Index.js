@@ -13,7 +13,6 @@ const SideImage = props => {
     )
 }
 
-
 const ImageGallery = props => (
     <div className="galleryPost" style={props.galleryStyle}>
         <section style={{ width: props.largeWidth }}>
