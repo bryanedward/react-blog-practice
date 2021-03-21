@@ -4,7 +4,7 @@ import './Style.css'
 const IndexLogo = () => {
     return (
         <div className="logo">
-            <a href="Contactos">Blog Photos</a>
+            <a href="CrearPost">Blog Photos</a>
         </div>
     )
 }

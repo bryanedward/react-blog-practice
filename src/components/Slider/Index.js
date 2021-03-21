@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Style.css'
 import IndexCard from '../Ui/Card/Index'
-import Blog from '../../data/infoo.json'
+import Service from '../../services/service'
 import { NavLink } from 'react-router-dom'
 
 const IndexSlider = (props) => {
@@ -9,14 +9,21 @@ const IndexSlider = (props) => {
     const [post, setPost] = useState([])
 
     useEffect(() => {
-        const post = Blog
-        setPost(post)
-    }, [post])
+        function onChange(params) {
+            setPost(params)
+        }
+        Service.getAll().on("value", onChange)
+
+        return function cleanup() {
+            Service.getAll().off("value", onChange)
+        }
+    })
 
     var instagram = () => {
         window.location.href = "https://www.instagram.com"
     }
 
+    console.log(post)
     return (
         <div className="sliderBar">
             <IndexCard>
@@ -34,18 +41,7 @@ const IndexSlider = (props) => {
                     <span>Publicaciones Recientes</span>
                 </div>
                 <div className="recentPosts">
-                    {
-                        post.map(post => {
-                            return (
-                                <NavLink key={post.id} to={`${post.id}`}>
-                                    <div className="recentPost">
-                                        <h3>{post.city_name}</h3>
-                                        <span>{post.country_name}</span>
-                                    </div>
-                                </NavLink>
-                            )
-                        })
-                    }
+
                 </div>
             </IndexCard>
         </div>
