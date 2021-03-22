@@ -9,7 +9,6 @@ const IndexSlider = (props) => {
     const [post, setPost] = useState([])
 
     useEffect(() => {
-<<<<<<< HEAD
         Service.getAll().on("value", onChange);
 
         return () => {
@@ -35,17 +34,6 @@ const IndexSlider = (props) => {
     }
 
 
-=======
-        function onChange(params) {
-            setPost(params)
-        }
-        Service.getAll().on("value", onChange)
-
-        return function cleanup() {
-            Service.getAll().off("value", onChange)
-        }
-    })
->>>>>>> c24bb8c8d3fedaa749d451f67599a60aa61adbfb
 
     var instagram = () => {
         window.location.href = "https://www.instagram.com"
@@ -69,7 +57,6 @@ const IndexSlider = (props) => {
                     <span>Publicaciones Recientes</span>
                 </div>
                 <div className="recentPosts">
-<<<<<<< HEAD
                     {
                         post.map(post => {
                             return (
@@ -82,9 +69,6 @@ const IndexSlider = (props) => {
                             )
                         })
                     }
-=======
-
->>>>>>> c24bb8c8d3fedaa749d451f67599a60aa61adbfb
                 </div>
             </IndexCard>
         </div>
