@@ -5,10 +5,6 @@ import IndexSlider from '../../components/Slider/Index'
 
 const IndexPost = () => {
 
-    const [publication, setPublication] = useState();
-
-
-
     return (
         <div>
             <section className="container">

@@ -29,12 +29,17 @@
 
 .recentPosts{
     padding: 10px 0;
+}
+
+.recentPosts > a{
+    text-decoration: none;
 
 }
 
 .recentPost{
     border-bottom: 1px solid #eee;
     padding: 0 0 9px 0;
+    
 }
 
 .recentPost h3{
@@ -42,11 +47,13 @@
     font-size: 14px;
     font-weight: 400;
     font-weight: bold;
+    color: black;
 }
 
 .recentPost span{
     font-size: 10px;
     font-weight: 300;
+    color: gray;
 }
 
 .recentPost:hover{
