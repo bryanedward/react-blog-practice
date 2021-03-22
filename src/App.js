@@ -11,7 +11,7 @@ function App() {
       <Router>
         <IndexHero />
         <Route path="/" exact component={IndexPost} />
-        <Route path="/Contactos"  component={CreatePost} />
+        <Route path="/CrearPost" component={CreatePost} />
         <Route path="/Publicaciones" component={IndexPost} />
         <Route path="/Publicaciones/:id" component={IndexPost} />
       </Router>

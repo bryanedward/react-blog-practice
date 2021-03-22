@@ -9,19 +9,20 @@ export default class IndexBlogPost extends Component {
         super(props)
         this.state = {
             publications: [],
-            status: true,
+            status: false,
             publication: []
         }
         this.onChange = this.onChange.bind(this)
     }
 
-
     componentDidMount() {
-        Service.getAll().on("value", this.onChange)
+        Service.getAll().on("value",
+            this.onChange)
     }
 
     componentWillUnmount() {
-        Service.getAll().off("value", this.onChange)
+        Service.getAll().off("value",
+            this.onChange)
     }
 
     onChange(items) {
@@ -47,9 +48,8 @@ export default class IndexBlogPost extends Component {
 
 
     render() {
-        const { publications, status, publication } = this.state;
+        const { publications } = this.state;
         return (
-
             <div className="blogPostContainer">
                 {
                     publications.map((item, index) => (

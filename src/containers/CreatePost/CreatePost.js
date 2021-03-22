@@ -76,7 +76,7 @@ export default class CreatePost extends Component {
                         (<div className="form-groups">
                             <div>
                                 <div className="form-group">
-                                    <label> Ingreso del titulo</label>
+                                    <label htmlFor=""> Ingreso del titulo</label>
                                     <input
                                         id="title"
                                         name="title"
@@ -93,6 +93,7 @@ export default class CreatePost extends Component {
                                         onChange={this.onChangeDescription}
                                         required />
                                 </div>
+
                                 <button
                                     className="btn btn-success"
                                     onClick={this.uploadImage}

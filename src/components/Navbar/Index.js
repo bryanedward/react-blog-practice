@@ -22,7 +22,7 @@ const IndexNavbar = () => {
         <div className="navbar">
             <ul className="navbarMenu">
                 <li><NavLink to="/Publicaciones">Publicaciones</NavLink></li>
-                <li><NavLink to="/Contactos">Crear</NavLink></li>
+                <li><NavLink to="/CrearPost">Crear</NavLink></li>
             </ul>
             <div className="search">
                 <form onSubmit={submitSearch}>
